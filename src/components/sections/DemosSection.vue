@@ -232,7 +232,12 @@ import { vTilt } from '@/directives/vTilt'
 .full-bot {
     @apply absolute -top-40 left-[51%] bg-[rgba(255,255,255,0.06)] border border-[rgba(255,255,255,0.06)] text-[rgba(240,240,245,0.6)];
 }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 .typeing {
-    @apply inline-block w-0.5 h-3.5 bg-[#FF6B5E] animate-blink ml-0.5;
+    @apply inline-block w-0.5 h-3.5 bg-[#FF6B5E] ml-0.5;
+    animation: blink 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 </style>
